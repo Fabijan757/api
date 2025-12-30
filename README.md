@@ -1,41 +1,40 @@
-[README_API.txt](https://github.com/user-attachments/files/23563835/README_API.txt)
-Analiza TV serija – projekt (API + MySQL + Tableau)
+TV Show Analysis – Project (API + MySQL + Tableau)
 
-Ovaj projekt prikazuje kompletan proces obrade i analize podataka o TV serijama korištenjem API-ja, MySQL baze podataka i Tableau vizualizacija. Cilj je bio automatski preuzeti podatke o najpopularnijim i najlošije ocijenjenim serijama, pohraniti ih u relacijsku bazu, obraditi SQL upitima te vizualizirati rezultate kroz interaktivni dashboard.
+This project demonstrates a complete workflow for processing and analyzing TV show data using an API, a MySQL database, and Tableau visualizations. The goal was to automatically retrieve data about the highest-rated and lowest-rated TV shows, store it in a relational database, analyze it with SQL queries, and visualize the results through an interactive dashboard.
 
-1. Preuzimanje podataka (API)
-Podaci o serijama preuzeti su putem javnog API-ja (bez API ključa).
-Prikupljeni podaci uključivali su:
-- naziv serije
-- ocjenu (rating)
-- žanrove
-- jezik serije
+1. Data collection (API)
+TV show data was retrieved via a public API (no API key required).
+The collected data includes:
+- show name
+- rating
+- genres
+- language
 
-API je korišten u Python skripti i spremljen u CSV datoteke:
-- najbolje_ocijenjeno.csv
-- najgore_ocijenjeno.csv
+The API was used within a Python script and the data was saved into CSV files:
+- top_rated.csv
+- lowest_rated.csv
 
-2. Uvoz podataka u MySQL
-Podaci su učitani u MySQL u tablicu 'tv_shows' s kolonama:
+2. Data import into MySQL
+The data was loaded into MySQL into a table named 'tv_shows' with the following columns:
 - id
 - name
 - rating
 - genres
 - language
 
-3. SQL analize
-Napravljene analize uključuju:
-- prosječna ocjena po žanru
-- broj serija po žanru
-- sortiranje najboljih i najgorih serija
-- filtriranje serija po žanru
+3. SQL analysis
+The performed analyses include:
+- average rating by genre
+- number of shows per genre
+- sorting top-rated and lowest-rated shows
+- filtering shows by genre
 
-4. Vizualizacije (Tableau Dashboard)
-Izrađena su tri grafikona:
-- Najgore ocijenjene serije
-- Najbolje ocijenjene serije
-- Analiza broja i prosječne ocjene žanrova
+4. Visualizations (Tableau Dashboard)
+Three charts were created:
+- lowest-rated TV shows
+- top-rated TV shows
+- genre count and average rating analysis
 
-5. Rezultat
-Projekt prikazuje cijeli Data Engineering proces:
-API → CSV → MySQL → SQL analize → Tableau Dashboard
+5. Result
+The project demonstrates a full data engineering pipeline:
+API → CSV → MySQL → SQL analysis → Tableau Dashboard
